@@ -1,0 +1,296 @@
+ /* 🌈 Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f8f9fb, #e3e6f3);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* 🌟 Header */
+    header {
+      background: #111;
+      color: white;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      animation: slideDown 1s ease;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    header h1 {
+      color: #00bcd4;
+      font-size: 26px;
+      letter-spacing: 1px;
+      transition: color 0.3s;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background: #00bcd4;
+      transition: 0.4s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* 🏠 Home */
+    section {
+      padding: 100px 60px;
+      min-height: 100vh;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .home {
+      background: linear-gradient(135deg, #007bff, #00bcd4);
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .typing {
+      display: inline-block;
+      border-right: 3px solid #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 4s steps(30, end), blink 0.7s infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    .home h2 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .home p {
+      width: 70%;
+      margin: 20px auto;
+      font-size: 18px;
+      line-height: 1.7;
+      animation: fadeInUp 2s ease;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ✨ Section Titles */
+    .section-title {
+      text-align: center;
+      color: #007bff;
+      margin-bottom: 30px;
+      font-size: 30px;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      width: 80px;
+      height: 4px;
+      background: #00bcd4;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+      animation: grow 2s infinite alternate;
+    }
+
+    @keyframes grow {
+      from { width: 40px; }
+      to { width: 100px; }
+    }
+
+    /* 👩‍💻 About */
+    .about p {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      line-height: 1.7;
+      font-size: 18px;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    /* 🎓 Education / Experience */
+    .edu-item, .experience-item {
+      background: #fff;
+      margin: 15px 0;
+      padding: 20px;
+      border-left: 5px solid #00bcd4;
+      border-radius: 8px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+      animation: fadeInScale 1.5s ease;
+    }
+
+    @keyframes fadeInScale {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .edu-item:hover, .experience-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .edu-item h3, .experience-item h3 {
+      color: #007bff;
+    }
+
+    /* 🚀 Projects */
+    .project-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .project {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: all 0.4s ease;
+      animation: floatUp 1.5s ease;
+    }
+
+    @keyframes floatUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .project:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    }
+
+    .project h3 {
+      color: #00bcd4;
+      margin-bottom: 10px;
+    }
+
+    /* 💡 Skills */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .skill {
+      background: #f4f4f4;
+      padding: 12px 25px;
+      border-radius: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, background 0.3s;
+      animation: pulse 2s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from { transform: scale(1); }
+      to { transform: scale(1.05); background: #00bcd4; color: white; }
+    }
+
+    .skill:hover {
+      transform: scale(1.2);
+    }
+
+    /* 📞 Contact */
+    .contact {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .contact a {
+      color: #00bcd4;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .contact a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      letter-spacing: 1px;
+    }
+
+    /* ⬆️ Scroll to Top */
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #00bcd4;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 10px 15px;
+      font-size: 22px;
+      display: none;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: all 0.3s;
+    }
+
+    #topBtn:hover {
+      transform: scale(1.2);
+      background: #007bff;
+    }
+
+    @media (max-width: 768px) {
+      header { flex-direction: column; }
+      section { padding: 80px 20px; }
+      .home p { width: 90%; }
+    }

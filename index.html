@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mathumitha G | Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header>
+    <h1>Mathumitha G</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="home" id="home">
+    <h2 class="typing">Hello, I'm Mathumitha 👋</h2>
+    <p>A passionate <b>Software & Web Developer</b> with hands-on experience in 
+      <b>React.js, MongoDB, JavaScript, Bootstrap, and Python</b>. 
+      I create beautiful, functional, and user-friendly web applications with a creative touch ✨</p>
+  </section>
+
+  <section class="about" id="about">
+    <h2 class="section-title">👩‍💻 About Me</h2>
+    <p>I’m <b>Mathumitha G</b>, an enthusiastic Computer Science student passionate about building responsive and interactive web solutions.
+       I love solving problems and developing web applications that improve user experience.
+       My vision is to become a full-stack developer and contribute innovative digital solutions to real-world challenges.</p>
+  </section>
+
+  <section class="education" id="education">
+    <h2 class="section-title">🎓 Education</h2>
+    <div class="edu-item">
+      <h3>BE - Computer Science and Engineering</h3>
+      <p>DMI Engineering College, Anna University (2023 - 2027)</p>
+      <p>Focused on Web Development, DSA, and Software Engineering concepts.</p>
+    </div>
+  </section>
+
+  <section class="experience" id="experience">
+    <h2 class="section-title">💼 Experience</h2>
+    <div class="experience-item">
+      <h3>Frontend Developer Intern — JClick Solution (Jan-Feb 2025)</h3>
+      <p>Developed responsive front-end projects using HTML, CSS, JavaScript, and Bootstrap.</p>
+    </div>
+
+    <div class="experience-item">
+      <h3>Full Stack Developer Intern — Copter Code, IIT Madras Research Park (July–Aug 2025)</h3>
+      <p>Built two real-time projects using React JS and MongoDB: 
+         <b>Student Management System</b> and <b>Certificate Management System</b>.</p>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <h2 class="section-title">🚀 Projects</h2>
+    <div class="project-container">
+      <div class="project"><h3>Student Management System</h3><p>React + MongoDB app for student data management.</p></div>
+      <div class="project"><h3>Certificate Management System</h3><p>Automated online certificate generator and validator.</p></div>
+      <div class="project"><h3>Hospital Management System</h3><p>Web solution for patient and doctor record management.</p></div>
+      <div class="project"><h3>Chatbot</h3><p>Interactive JS chatbot with custom response patterns.</p></div>
+      <div class="project"><h3>Food Ordering Website</h3><p>UI for food delivery with responsive design and animations.</p></div>
+      <div class="project"><h3>Shoes Shopping Website</h3><p>Modern animated e-commerce site for footwear.</p></div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <h2 class="section-title">💡 Skills</h2>
+    <div class="skills-list">
+      <div class="skill">HTML5</div>
+      <div class="skill">CSS3</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Bootstrap</div>
+      <div class="skill">React JS</div>
+      <div class="skill">MongoDB</div>
+      <div class="skill">Python</div>
+      <div class="skill">Java</div>
+      <div class="skill">C</div>
+      <div class="skill">PHP</div>
+      <div class="skill">Data Structures</div>
+      <div class="skill">Algorithms</div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="section-title">📞 Contact Me</h2>
+    <p>Email: <a href="mailto:mathumgk999@gmail.com">mathumgk999@gmail.com</a></p>
+    <p>Phone: <a href="tel:+917418190541">+91 7418190541</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/mathumitha-g-999" target="_blank">linkedin.com/in/mathumitha-g-999</a></p>
+    <p>Location: Tirunelveli, Tamil Nadu</p>
+  </section>
+
+  <footer>© 2025 Mathumitha G | All Rights Reserved</footer>
+
+  <button id="topBtn">↑</button>
+
+  <script>
+    // Scroll animations
+    const sections = document.querySelectorAll("section");
+    window.addEventListener("scroll", () => {
+      sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < window.innerHeight - 150) sec.classList.add("show");
+      });
+    });
+
+    // Scroll-to-top
+    const btn = document.getElementById("topBtn");
+    window.onscroll = () => {
+      btn.style.display = window.scrollY > 200 ? "block" : "none";
+    };
+    btn.onclick = () => window.scrollTo({top: 0, behavior: "smooth"});
+  </script>
+</body>
+</html>
